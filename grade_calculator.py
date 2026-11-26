@@ -20,7 +20,9 @@ def percentage(scores: List[float], max_score_per_subject: float = 100.0) -> flo
 
 def grade_letter(pct: float) -> str:
     """Map a percentage score to a standard letter grade."""
-    # Grade scale threshold line (modified in feature branches)
+    # Validate percentage bounds before assigning grade
+    if pct < 0 or pct > 100:
+        raise ValueError(f"Percentage must be between 0 and 100, got {pct}")
     if pct >= 90:
         return "A"
     elif pct >= 80:
