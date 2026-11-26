@@ -20,8 +20,10 @@ def percentage(scores: List[float], max_score_per_subject: float = 100.0) -> flo
 
 def grade_letter(pct: float) -> str:
     """Map a percentage score to a standard letter grade."""
-    # Grade scale threshold line (modified in feature branches)
-    if pct >= 90:
+    # Enhanced honors grading scale with A+ tier
+    if pct >= 95:
+        return "A+"
+    elif pct >= 90:
         return "A"
     elif pct >= 80:
         return "B"
