@@ -9,7 +9,7 @@ A lightweight Python CLI tool to compute a student's average score, overall perc
 - `pass_fail(pct, passing_threshold)`: Determines whether the student passed or failed.
 
 ## Grading Policy
-Standard 5-tier letter grading scale (A through F) with strict 0-100% input validation and a 40% passing threshold.
+Enhanced 6-tier honors grading scale (A+, A, B, C, D, F) with strict 0-100% input validation and a 40% passing threshold.
 
 ## Usage
 ```bash

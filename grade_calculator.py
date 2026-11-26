@@ -23,7 +23,10 @@ def grade_letter(pct: float) -> str:
     # Validate percentage bounds before assigning grade
     if pct < 0 or pct > 100:
         raise ValueError(f"Percentage must be between 0 and 100, got {pct}")
-    if pct >= 90:
+    # Enhanced honors grading scale with A+ tier
+    if pct >= 95:
+        return "A+"
+    elif pct >= 90:
         return "A"
     elif pct >= 80:
         return "B"
